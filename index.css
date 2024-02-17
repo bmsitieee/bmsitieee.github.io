@@ -10,13 +10,8 @@
 	left:0;
 	overflow-x:hidden;
 }
-img{
-	height:25%;
-	width:100%;
-	padding-top:100%;
-}
 span{
-	color:#fff;
+	color:black;
 }
 .sidenav a{
 	transition: all 0.2s;
@@ -35,4 +30,28 @@ span{
 	color:gray;
 	right:0;
 	top:-30px;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333; /* Updated background color */
+    color: #fff; /* Updated text color */
+    width: 100%;
+}
+
+.footer a {
+    color: #ccc; /* Set the color of the links */
+}
+
+
+@media screen and (max-width: 600px) {
+    .sidenav a {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .container {
+        padding-top: 80px;
+    }
 }
