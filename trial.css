@@ -48,6 +48,7 @@ body {
 }
 
 .navbar{
+    position: fixed;
 	font-family:"Comic Sans MS";
 }
 .nav-item:hover, .nav-link:hover {
