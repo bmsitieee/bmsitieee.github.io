@@ -12,7 +12,7 @@
 
 </head>
 <body>
-    <img  class="head1" src="pics/head2.jpg"><br>
+   <div class="header"><br> <img  class="head1" src="pics/head2.jpg"><br></div>
     <h1 class="text-center my-4 m-5">MEMBERSHIP</h1>
     <div class="row justify-content-center m-4">
       <div class="col-md-6 col-sm-12">
@@ -45,15 +45,15 @@
           <div class="row justify-content-center">
             <div class="col-md-8">
                 Enter your Year of graduation
-              <input type="number" id="dob" class="form-control mb-3" style="margin-bottom: 10px;"
-                placeholder="Year">
+              <input type="number" id="year" class="form-control mb-3" style="margin-bottom: 10px;"
+                placeholder="Year" value="2025" min="2024" max="2027">
             </div>
           </div>
           <div class="row justify-content-center">
             <div class="col-md-8">
                 Enter your Phone number
               <input type="number" id="phone" class="form-control mb-3" style="margin-bottom: 10px;"
-                placeholder="Phone number">
+                placeholder="Phone number" max="9999999999">
             </div>
           </div>
           <div class="row justify-content-center">
@@ -93,7 +93,7 @@
             <div class="col-md-8">
                 <div id="apple" style="height: 200px; width: auto; background-color: #0E5D7B; margin-top: 0px; position: relative;">
                     <h1>IEEE</h1>
-                    <div class="disclaimer">*Base membership of 1370, inclusive of taxes</div>
+                    <div class="disclaimer">*Base membership of INR.1370, inclusive of taxes</div>
                 </div>
             </div>
         </div>
@@ -132,7 +132,7 @@
               <div class="card-body d-flex flex-column">
                 <div>
                   <h5 class="card-title">Signal Processing Society</h5>
-                  <p class="card-text">
+                  <p class="card-text">INR. 50
                     <img src="pics/info.svg" alt="info" onclick="toggleInfo2()"> <div id="infoBox2" class="info-container">
                         <p>This is the information box. You can put any information or content here.</p>
                     </div>
@@ -148,9 +148,9 @@
               <div class="card-body d-flex flex-column">
                 <div>
                   <h5 class="card-title">Information Theory Society</h5>
-                  <p class="card-text">
+                  <p class="card-text">INR. 50
                     <img src="pics/info.svg" alt="info" onclick="toggleInfo3()"> <div id="infoBox3" class="info-container">
-                        <p>This is the information box. You can put any information or content here.</p>
+                        <p>Elevate your expertise in information theory with the IEEE Information Theory Society! Join our global network of pioneers, access exclusive resources, and lead the charge in revolutionizing communication and data science. Seize the opportunity to make a lasting impact – join us today!</p>
                     </div>
                   </p>
                 </div>
@@ -164,7 +164,7 @@
               <div class="card-body d-flex flex-column">
                 <div>
                   <h5 class="card-title">Computational Intelligence Society</h5>
-                  <p class="card-text">
+                  <p class="card-text">INR. 198
                     <img src="pics/info.svg" alt="info" onclick="toggleInfo4()"> <div id="infoBox4" class="info-container">
                         <p>This is the information box. You can put any information or content here.</p>
                     </div>
@@ -182,7 +182,7 @@
                   <div class="card-body d-flex flex-column">
                     <div>
                       <h5 class="card-title">Robotics and Automation Society</h5>
-                      <p class="card-text">
+                      <p class="card-text">INR. 415
                         <img src="pics/info.svg" alt="info" onclick="toggleInfo5()"> <div id="infoBox5" class="info-container">
                             <p>This is the information box. You can put any information or content here.</p>
                         </div>
@@ -194,11 +194,11 @@
             </div>
             <div class="col-md-3 col-sm-6">
                 <div class="card">
-                  <img id="selectedImage6" class="logo" src="pics/pels.png" class="card-img-top" alt="pes">
+                  <img id="selectedImage6" class="logo" src="pics/pes.png" class="card-img-top" alt="pes">
                   <div class="card-body d-flex flex-column">
                     <div>
-                      <h5 class="card-title">Power Electronics Society</h5>
-                      <p class="card-text">
+                      <h5 class="card-title">Power and Energy Society</h5>
+                      <p class="card-text">INR. 50
                         <img src="pics/info.svg" alt="info" onclick="toggleInfo6()"> <div id="infoBox6" class="info-container">
                             <p>This is the information box. You can put any information or content here.</p>
                         </div>
@@ -236,11 +236,15 @@
             *Chapter Membership prices marked are not inclusive of taxes, for any other chapters please visit the <a href="https://www.ieee.org/" target="_blank">IEEE Home page</a>
         </div><br>
 
-
-
         
-
-
+       
+        <div class="row justify-content-center">
+            <div class="col-md-3 col-sm-6">
+                Enter proof of payment
+              <input type="text" id="utr" class="form-control mb-3" style="margin-bottom: 10px;"
+                placeholder="UTR no.">
+            </div>
+          </div>
 
 
 
@@ -267,11 +271,20 @@
 
 
   <!-- Footer -->
-  <footer class="text-center text-lg-start bg-dark text-muted">
+  <div class="text-center text-lg-start bg-dark text-muted">
     <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
     <div class="row">
-        <div class="col-sm-12 col-lg-6">
+        <div class="col-sm-6 col-lg-3">
             <h2>Reach Us:</h2><br>
+            
+        <div class="col-sm-6 col-lg-3">
+            check
+
+
+
+        </div>
+            
+        <div class="col-sm-12 col-lg-6">
     <a href="https://www.linkedin.com/company/ieee-sb-bmsitm/mycompany/" target="_blank">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
 			<path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
@@ -296,7 +309,7 @@
       
   
    
-  </footer><!--
+</div><!--
 <div class="right-corner">
     <a href="https://chat.whatsapp.com/KZP6QfzdqcuLuEYVQrjflp" class="whatsapp-btn" target="_blank">
       <img src="pics/1000.png" alt="WhatsApp" style="width: 50px; height: 50px;">

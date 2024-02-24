@@ -142,3 +142,7 @@ button {
     text-align: center;
     z-index: 1000;
 }
+.header
+{
+    background-color: black;
+}
