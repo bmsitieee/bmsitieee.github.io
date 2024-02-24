@@ -44,11 +44,50 @@
           </div>
           <div class="row justify-content-center">
             <div class="col-md-8">
+                Enter your Year of graduation
+              <input type="number" id="dob" class="form-control mb-3" style="margin-bottom: 10px;"
+                placeholder="Year">
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-md-8">
                 Enter your Phone number
               <input type="number" id="phone" class="form-control mb-3" style="margin-bottom: 10px;"
                 placeholder="Phone number">
             </div>
           </div>
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+                <label for="options">
+                    Enter your Branch:</label>
+        <select id="options">
+            <option value="option0" selected>Select</option>
+            <option value="option1">CSE</option>
+            <option value="option2">ISE</option>
+            <option value="option3">AI/ML</option>
+            <option value="option4">AI/DS</option>
+            <option value="option5">CS/BS</option>
+            <option value="option6">ECE</option>
+            <option value="option7">MECH</option>
+            <option value="option8">CIVIL</option>
+            <option value="option9">ETE</option>
+            <option value="option10">EEE</option>
+
+        </select>
+            </div>
+          </div><br>
+
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+                <label for="options">
+                    Enter your Gender:</label>
+        <select id="options">
+            <option value="M">M</option>
+            <option value="F">F</option>
+
+        </select>
+            </div>
+          </div><br>
 
           <div class="row justify-content-center">
             <div class="col-md-8">
@@ -65,109 +104,8 @@
 
 
 
-      <script>
-        function changeShade1() {
-            var image = document.getElementById('selectedImage1');
-            image.classList.toggle('selected');
-        }
-        function changeShade2() {
-            var image = document.getElementById('selectedImage2');
-            image.classList.toggle('selected');
-        }
-        function changeShade3() {
-            var image = document.getElementById('selectedImage3');
-            image.classList.toggle('selected');
-        }
-        function changeShade4() {
-            var image = document.getElementById('selectedImage4');
-            image.classList.toggle('selected');
-        }
-        function changeShade5() {
-            var image = document.getElementById('selectedImage5');
-            image.classList.toggle('selected');
-        }
-        function changeShade6() {
-            var image = document.getElementById('selectedImage6');
-            image.classList.toggle('selected');
-        }
-
-
-
-        function toggleInfo1() 
-        {
-        var infoBox = document.getElementById('infoBox1');
-        infoBox.classList.toggle('show');
-        }
-        function toggleInfo2() 
-        {
-        var infoBox = document.getElementById('infoBox2');
-        infoBox.classList.toggle('show');
-        }
-        function toggleInfo3() 
-        {
-        var infoBox = document.getElementById('infoBox3');
-        infoBox.classList.toggle('show');
-        }
-        function toggleInfo4() 
-        {
-        var infoBox = document.getElementById('infoBox4');
-        infoBox.classList.toggle('show');
-        }
-        function toggleInfo5() 
-        {
-        var infoBox = document.getElementById('infoBox5');
-        infoBox.classList.toggle('show');
-        }
-        function toggleInfo6() 
-        {
-        var infoBox = document.getElementById('infoBox6');
-        infoBox.classList.toggle('show');
-        }
-
-
-
-
-
-
-
-    // Close info box if clicked outside of it
-    
-    document.addEventListener('click', function (event) {
-        var infoBox = document.getElementById('infoBox1');
-        if (!event.target.matches('img') && !event.target.closest('.info-container')) {
-            infoBox.classList.remove('show');
-        }
-    });
-    document.addEventListener('click', function (event) {
-        var infoBox = document.getElementById('infoBox2');
-        if (!event.target.matches('img') && !event.target.closest('.info-container')) {
-            infoBox.classList.remove('show');
-        }
-    });
-    document.addEventListener('click', function (event) {
-        var infoBox = document.getElementById('infoBox3');
-        if (!event.target.matches('img') && !event.target.closest('.info-container')) {
-            infoBox.classList.remove('show');
-        }
-    });
-    document.addEventListener('click', function (event) {
-        var infoBox = document.getElementById('infoBox4');
-        if (!event.target.matches('img') && !event.target.closest('.info-container')) {
-            infoBox.classList.remove('show');
-        }
-    });
-    document.addEventListener('click', function (event) {
-        var infoBox = document.getElementById('infoBox5');
-        if (!event.target.matches('img') && !event.target.closest('.info-container')) {
-            infoBox.classList.remove('show');
-        }
-    });
-    document.addEventListener('click', function (event) {
-        var infoBox = document.getElementById('infoBox6');
-        if (!event.target.matches('img') && !event.target.closest('.info-container')) {
-            infoBox.classList.remove('show');
-        }
-    });
+      <script src="membership.js">
+       
     </script>
     
         <h4 class="text-center my-4 m-5">CHAPTERS</h4>
@@ -271,10 +209,34 @@
                 </div>
             </div>
         </div>
+
+
+
+
+
+
+
+
+
+
+
+        <!--Add the total price box here with calculation and upload proof of payment-->
+
+
+
+
+
+
+
+
+
+
         </div>
         <div class="container">
             *Chapter Membership prices marked are not inclusive of taxes, for any other chapters please visit the <a href="https://www.ieee.org/" target="_blank">IEEE Home page</a>
-        </div>
+        </div><br>
+
+
 
         
 
@@ -334,8 +296,12 @@
       
   
    
-  </footer>
-
+  </footer><!--
+<div class="right-corner">
+    <a href="https://chat.whatsapp.com/KZP6QfzdqcuLuEYVQrjflp" class="whatsapp-btn" target="_blank">
+      <img src="pics/1000.png" alt="WhatsApp" style="width: 50px; height: 50px;">
+    </a>
+  </div>-->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
           integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
           </script>
