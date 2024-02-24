@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .centered-square {
+            position: relative;
+            width: 200px; /* Adjust the size as needed */
+            height: 200px; /* Should be the same as width for a square shape */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(45deg, #ffd700, #ffcc00 50%, #ffd700); /* Lustrous gold linear gradient */
+            color: #000; /* Black text color */
+            font-family: 'Quicksand', sans-serif; /* Better font */
+            border-radius: 20px; /* Rounded edges */
+            box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.7); /* Enhanced shining effect */
+            animation: shine 2s infinite alternate; /* Shining animation */
+        }
+
+   
+
+        @keyframes shine {
+            to {
+                box-shadow: 0 0 25px 10px rgba(255, 255, 255, 0.1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="centered-square">
+        <div class="shine-line"></div>
+        IEEE
+    </div>
+</body>
+</html>
