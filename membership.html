@@ -12,7 +12,7 @@
 
 </head>
 <body>
-    <img  class="head1" src="pics/logo-1-278x278(1).png"><br>
+    <img  class="head1" src="pics/head2.jpg"><br>
     <h1 class="text-center my-4 m-5">MEMBERSHIP</h1>
     <div class="row justify-content-center m-4">
       <div class="col-md-6 col-sm-12">
@@ -44,6 +44,14 @@
           </div>
           <div class="row justify-content-center">
             <div class="col-md-8">
+                Enter your Phone number
+              <input type="number" id="phone" class="form-control mb-3" style="margin-bottom: 10px;"
+                placeholder="Phone number">
+            </div>
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="col-md-8">
                 <div id="apple" style="height: 200px; width: auto; background-color: #0E5D7B; margin-top: 0px; position: relative;">
                     <h1>IEEE</h1>
                     <div class="disclaimer">*Base membership of 1370, inclusive of taxes</div>
@@ -53,79 +61,222 @@
       </div>
 
 
+
+
+
+
+      <script>
+        function changeShade1() {
+            var image = document.getElementById('selectedImage1');
+            image.classList.toggle('selected');
+        }
+        function changeShade2() {
+            var image = document.getElementById('selectedImage2');
+            image.classList.toggle('selected');
+        }
+        function changeShade3() {
+            var image = document.getElementById('selectedImage3');
+            image.classList.toggle('selected');
+        }
+        function changeShade4() {
+            var image = document.getElementById('selectedImage4');
+            image.classList.toggle('selected');
+        }
+        function changeShade5() {
+            var image = document.getElementById('selectedImage5');
+            image.classList.toggle('selected');
+        }
+        function changeShade6() {
+            var image = document.getElementById('selectedImage6');
+            image.classList.toggle('selected');
+        }
+
+
+
+        function toggleInfo1() 
+        {
+        var infoBox = document.getElementById('infoBox1');
+        infoBox.classList.toggle('show');
+        }
+        function toggleInfo2() 
+        {
+        var infoBox = document.getElementById('infoBox2');
+        infoBox.classList.toggle('show');
+        }
+        function toggleInfo3() 
+        {
+        var infoBox = document.getElementById('infoBox3');
+        infoBox.classList.toggle('show');
+        }
+        function toggleInfo4() 
+        {
+        var infoBox = document.getElementById('infoBox4');
+        infoBox.classList.toggle('show');
+        }
+        function toggleInfo5() 
+        {
+        var infoBox = document.getElementById('infoBox5');
+        infoBox.classList.toggle('show');
+        }
+        function toggleInfo6() 
+        {
+        var infoBox = document.getElementById('infoBox6');
+        infoBox.classList.toggle('show');
+        }
+
+
+
+
+
+
+
+    // Close info box if clicked outside of it
+    
+    document.addEventListener('click', function (event) {
+        var infoBox = document.getElementById('infoBox1');
+        if (!event.target.matches('img') && !event.target.closest('.info-container')) {
+            infoBox.classList.remove('show');
+        }
+    });
+    document.addEventListener('click', function (event) {
+        var infoBox = document.getElementById('infoBox2');
+        if (!event.target.matches('img') && !event.target.closest('.info-container')) {
+            infoBox.classList.remove('show');
+        }
+    });
+    document.addEventListener('click', function (event) {
+        var infoBox = document.getElementById('infoBox3');
+        if (!event.target.matches('img') && !event.target.closest('.info-container')) {
+            infoBox.classList.remove('show');
+        }
+    });
+    document.addEventListener('click', function (event) {
+        var infoBox = document.getElementById('infoBox4');
+        if (!event.target.matches('img') && !event.target.closest('.info-container')) {
+            infoBox.classList.remove('show');
+        }
+    });
+    document.addEventListener('click', function (event) {
+        var infoBox = document.getElementById('infoBox5');
+        if (!event.target.matches('img') && !event.target.closest('.info-container')) {
+            infoBox.classList.remove('show');
+        }
+    });
+    document.addEventListener('click', function (event) {
+        var infoBox = document.getElementById('infoBox6');
+        if (!event.target.matches('img') && !event.target.closest('.info-container')) {
+            infoBox.classList.remove('show');
+        }
+    });
+    </script>
+    
         <h4 class="text-center my-4 m-5">CHAPTERS</h4>
-        <!-- Location Cards -->
         <div class="row">
-          <!-- Location 7: Kuteera (Snacks Shop) -->
+          
           <div class="col-md-3 col-sm-6">
             <div class="card">
-              <img src="pics/4.png" class="card-img-top" alt="Kuteera Snacks Shop">
+              <img id="selectedImage1" class="logo" src="pics/ciss.png" class="card-img-top" alt="cs">
               <div class="card-body d-flex flex-column">
                 <div>
-                  <h5 class="card-title">Kuteera (Snacks Shop)</h5>
-                  <p class="card-text">A popular snacks shop within the college campus.</p>
+                  <h5 class="card-title">Computer Society</h5>
+                  <p class="card-text"> INR. 331
+                    <img src="pics/info.svg" alt="info" onclick="toggleInfo1()"> <div id="infoBox1" class="info-container">
+                    <p>This is the information box. You can put any information or content here.</p>
+                </div></p>
                 </div>
-                <a href="https://maps.app.goo.gl/YhfZADBtH27ZbzG7A" class="btn btn-primary mt-2" target="_blank">View
-                  on Map</a>
+                <button onclick="changeShade1()">Select</button>
               </div>
             </div>
           </div>
           <div class="col-md-3 col-sm-6">
             <div class="card">
-              <img src="pics/8.png" class="card-img-top" alt="Boys hostel">
+              <img id="selectedImage2" class="logos" src="pics/sps.png" class="card-img-top" alt="sps">
               <div class="card-body d-flex flex-column">
                 <div>
-                  <h5 class="card-title">Boys Hostel</h5>
-                  <p class="card-text">Venue for food</p>
+                  <h5 class="card-title">Signal Processing Society</h5>
+                  <p class="card-text">
+                    <img src="pics/info.svg" alt="info" onclick="toggleInfo2()"> <div id="infoBox2" class="info-container">
+                        <p>This is the information box. You can put any information or content here.</p>
+                    </div>
+                  </p>
                 </div>
-                <a href="https://maps.app.goo.gl/YhfZADBtH27ZbzG7A" class="btn btn-primary mt-2" target="_blank">View
-                  on Map</a>
+                <button onclick="changeShade2()">Select</button>
               </div>
             </div>
           </div>
           <div class="col-md-3 col-sm-6">
             <div class="card">
-              <img src="pics/9.png" class="card-img-top" alt="Boys hostel">
+              <img id="selectedImage3" class="logo" src="pics/its.png" class="card-img-top" alt="its">
               <div class="card-body d-flex flex-column">
                 <div>
-                  <h5 class="card-title">Boys PG</h5>
-                  <p class="card-text">Accomodation</p>
+                  <h5 class="card-title">Information Theory Society</h5>
+                  <p class="card-text">
+                    <img src="pics/info.svg" alt="info" onclick="toggleInfo3()"> <div id="infoBox3" class="info-container">
+                        <p>This is the information box. You can put any information or content here.</p>
+                    </div>
+                  </p>
                 </div>
-                <a href="https://maps.app.goo.gl/YhfZADBtH27ZbzG7A" class="btn btn-primary mt-2" target="_blank">View
-                  on Map</a>
+                <button onclick="changeShade3()">Select</button>
               </div>
             </div>
           </div>
-          <!-- Location 1: Academic -->
           <div class="col-md-3 col-sm-6">
             <div class="card">
-              <img src="pics/2.png" class="card-img-top" alt="Academic Building">
+              <img id="selectedImage4" class="logo" src="pics/cis.png" class="card-img-top" alt="cis">
               <div class="card-body d-flex flex-column">
                 <div>
-                  <h5 class="card-title">Academic Block</h5>
-                  <p class="card-text">Entrance to Academic Block</p>
+                  <h5 class="card-title">Computational Intelligence Society</h5>
+                  <p class="card-text">
+                    <img src="pics/info.svg" alt="info" onclick="toggleInfo4()"> <div id="infoBox4" class="info-container">
+                        <p>This is the information box. You can put any information or content here.</p>
+                    </div>
+                  </p>
                 </div>
-                <a href="https://maps.app.goo.gl/LVrAVndpVodVj7xCA" class="btn btn-primary mt-2" target="_blank">View
-                  on Map</a>
+                <button onclick="changeShade4()">Select</button>
               </div>
             </div>
           </div>
-      
-          <!-- Location 2: BSN Front Entrance -->
-          <div class="col-md-3 col-sm-6">
-            <div class="card">
-              <img src="pics/7.png" class="card-img-top" alt="BSN Front Entrance">
-              <div class="card-body d-flex flex-column">
-                <div>
-                  <h5 class="card-title">BSN Front Entrance</h5>
-                  <p class="card-text">The front entrance of the BSN building.</p>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="card">
+                  <img id="selectedImage5" class="logo" src="pics/ras.png" class="card-img-top" alt="ras">
+                  <div class="card-body d-flex flex-column">
+                    <div>
+                      <h5 class="card-title">Robotics and Automation Society</h5>
+                      <p class="card-text">
+                        <img src="pics/info.svg" alt="info" onclick="toggleInfo5()"> <div id="infoBox5" class="info-container">
+                            <p>This is the information box. You can put any information or content here.</p>
+                        </div>
+                      </p>
+                    </div>
+                    <button onclick="changeShade5()">Select</button>
+                  </div>
                 </div>
-                <a href="https://maps.app.goo.gl/ueAcjRWfHaLYSZ3H6" class="btn btn-primary mt-2" target="_blank">View
-                  on Map</a>
-              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="card">
+                  <img id="selectedImage6" class="logo" src="pics/pels.png" class="card-img-top" alt="pes">
+                  <div class="card-body d-flex flex-column">
+                    <div>
+                      <h5 class="card-title">Power Electronics Society</h5>
+                      <p class="card-text">
+                        <img src="pics/info.svg" alt="info" onclick="toggleInfo6()"> <div id="infoBox6" class="info-container">
+                            <p>This is the information box. You can put any information or content here.</p>
+                        </div>
+                      </p>
+                    </div>
+                    <button onclick="changeShade6()">Select</button>
+                  </div>
+                </div>
             </div>
         </div>
+        </div>
+        <div class="container">
+            *Chapter Membership prices marked are not inclusive of taxes, for any other chapters please visit the <a href="https://www.ieee.org/" target="_blank">IEEE Home page</a>
+        </div>
 
+        
 
 
 
@@ -137,7 +288,7 @@
           <div class="col-md-8">
             <div>
               <button id="submit-issue" type="button" class="btn btn-primary d-block mx-auto" style="margin-bottom: 10px;"
-                onclick="executeGoogleFormsSubmit()">Send</button>
+                onclick="executeGoogleFormsSubmit()">Submit</button>
             </div>
           </div>
         </div>
@@ -182,16 +333,7 @@
     </a>
       
   
-    <div class="row">
-        <div class="col-6">
-          <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-            <div class="powered-by-ieee">
-              <a href="https://www.ieee.org/" target="_blank">Powered by
-            </div>
-            <img src="pics/ieee-logo1.jpg" alt="IEEE Logo" style="height: 300px; vertical-align: middle;">
-          </div></a>
-
-        </div>
+   
   </footer>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
