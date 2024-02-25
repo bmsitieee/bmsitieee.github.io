@@ -244,27 +244,49 @@ function executeGoogleFormsSubmit() {
         }
     }
 
-    // Create a new XMLHttpRequest object
-    var xhr = new XMLHttpRequest();
+    // Create a form and append to body
+    var form = document.createElement("form");
+    form.method = "POST";
+    form.action = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSc9j9rrJspdVSeb0XsEEY8XRwKqdi2WwJu1vOZ-NDGlXQhQHA/formResponse";
+    form.target = "_blank"; // Open in a new tab
+    form.onsubmit = function() {
+        setTimeout(function() { window.close(); }, 500); // Close the tab after 5 seconds
+    }
 
-    // Set the request method and URL
-    xhr.open("POST", "https://docs.google.com/forms/u/0/d/e/1FAIpQLSc9j9rrJspdVSeb0XsEEY8XRwKqdi2WwJu1vOZ-NDGlXQhQHA/formResponse");
+    // Add form fields
+    for (var pair of formData.entries()) {
+        var input = document.createElement("input");
+        input.type = "hidden";
+        input.name = pair[0];
+        input.value = pair[1];
+        form.appendChild(input);
+    }
 
-    // Set the onload event handler
-    xhr.onload = function () {
-        // Use the response status and text
-        console.log(`Status : ${xhr.status} ${xhr.statusText}`);
-        console.log(`Body : \n${xhr.responseText}`);
-    };
+    // Append form to body and submit
+    document.body.appendChild(form);
+    form.submit();
 
-    // Send the POST request with the form data
-    xhr.send(new URLSearchParams(formData).toString());
+    // Clean up - remove form from body
+    document.body.removeChild(form);
 
     // Reset the form
     document.getElementById("name").value = "";
     document.getElementById("email").value = "";
     document.getElementById("year").value = "";
     document.getElementById("phone").value = "";
-    document.getElementById("branch").value = "";
-    alert("Your response has been submitted successfully");
+    document.getElementById("utr").value = "";
+    document.getElementById("dob").value = "";
+    document.getElementById("branch").value = "option0";
+
+    for (var i = 0; i < chapters.length; i++) {
+        if (selectedImages["selectedImage" + i]) {
+            document.getElementById("selectedImage" + (i + 1)).classList.remove("selected");
+            selectedImages["selectedImage" + i] = false;
+        }
+    }
+    totalPrice = 1370;
+    updatePriceBox(totalPrice);
+    count = 0;
+    calculateTotalPrice(totalPrice);
 }
+
