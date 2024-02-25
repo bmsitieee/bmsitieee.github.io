@@ -339,5 +339,5 @@ async function executeGoogleFormsSubmit() {
     alert("Form submitted successfully!");
 
     // reload the page
-    // location.reload();
+    location.reload();
 }
