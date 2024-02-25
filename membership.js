@@ -15,20 +15,32 @@ var selectedImages = {
 
 function changeShade1() {
     var image = document.getElementById('selectedImage1');
+    
+    var selectButton1 = document.getElementById('selectButton1');
+
+
     image.classList.toggle('selected');
     var productPrice = 392;
     var productPrice1 = 412;//price1 can be higher than price but not the other way
 
     if (image.classList.contains('selected')) {
-        totalPrice1 += productPrice;
-        chapters += productPrice1;
-        count++;
+        totalPrice1 -= productPrice;
+        chapters -= productPrice1;
+        selectButton1.textContent = 'Select';
+        
+        selectButton1.classList.remove('selectedButton1');
+        count--;
         selectedImages["selectedImage1"] = true;
 
     } else {
-        totalPrice1 -= productPrice;
-        chapters -= productPrice1;
-        count--;
+
+
+
+        totalPrice1 += productPrice;
+        chapters += productPrice1;
+        selectButton1.classList.add('selectedButton1');
+        count++;
+        selectButton1.textContent = 'Selected';
         selectedImages["selectedImage1"] = false;
     }
 
@@ -37,40 +49,52 @@ function changeShade1() {
 
 function changeShade2() {
     var image = document.getElementById('selectedImage2');
+    var selectButton1 = document.getElementById('selectButton2');
     image.classList.toggle('selected');
 
     var productPrice = 49;
     var productPrice1 = 49;
 
     if (image.classList.contains('selected')) {
-        totalPrice1 += productPrice1;
-        chapters += productPrice;
-        count++;
+        totalPrice1 -= productPrice1;
+        chapters -= productPrice;
+        selectButton2.textContent = 'Select';
+        
+        selectButton2.classList.remove('selectedButton2');
+        count--;
         selectedImages["selectedImage2"] = true;
     } else {
         
-        chapters -= productPrice1;
-        count--;
-        totalPrice1 -= productPrice;
+        selectButton2.classList.add('selectedButton2');
+        chapters += productPrice1;
+        count++;
+        selectButton2.textContent = 'Selected';
+        totalPrice1 += productPrice;
         selectedImages["selectedImage2"] = false;
     }
     updatePriceBox(totalPrice1);
 }
 function changeShade3() {
     var image = document.getElementById('selectedImage3');
+    var selectButton1 = document.getElementById('selectButton3');
     image.classList.toggle('selected');
     var productPrice = 49;
     var productPrice1 = 49;
 
     if (image.classList.contains('selected')) {
-        totalPrice1 += productPrice;
-        chapters += productPrice1;
-        count++;
+        totalPrice1 -= productPrice;
+        selectButton3.textContent = 'Select';
+        selectButton3.classList.remove('selectedButton3');
+        chapters -= productPrice1;
+        count--;
         selectedImages["selectedImage3"] = true;
     } else {
-        count--;
-        totalPrice1 -= productPrice;
-        chapters -= productPrice1;
+        
+        selectButton3.classList.add('selectedButton3');
+        count++;
+        selectButton3.textContent = 'Selected';
+        totalPrice1 += productPrice;
+        chapters += productPrice1;
         selectedImages["selectedImage3"] = false;
     }
 
@@ -78,19 +102,27 @@ function changeShade3() {
 }
 function changeShade4() {
     var image = document.getElementById('selectedImage4');
+    
+    var selectButton4 = document.getElementById('selectButton4');
     image.classList.toggle('selected');
     var productPrice = 234;
     var productPrice1 = 234;
 
     if (image.classList.contains('selected')) {
-        totalPrice1 += productPrice;
-        chapters += productPrice1;
-        count++;
+        totalPrice1 -= productPrice;
+        chapters -= productPrice1;
+        selectButton4.textContent = 'Select';
+        
+        selectButton4.classList.remove('selectedButton4');
+        count--;
         selectedImages["selectedImage4"] = true;
     } else {
-        count--;
-        chapters -= productPrice;
-        totalPrice1 -= productPrice1;
+        
+        selectButton4.classList.add('selectedButton4');
+        selectButton4.textContent = 'Selected';
+        count++;
+        chapters += productPrice;
+        totalPrice1 += productPrice1;
         selectedImages["selectedImage4"] = false;
     }
 
@@ -98,19 +130,25 @@ function changeShade4() {
 }
 function changeShade5() {
     var image = document.getElementById('selectedImage5');
+    
+    var selectButton5 = document.getElementById('selectButton5');
     image.classList.toggle('selected');
     var productPrice = 490;
     var productPrice1 = 490;
 
     if (image.classList.contains('selected')) {
-        totalPrice1 += productPrice;
-        chapters += productPrice1;
-        count++;
+        selectButton5.textContent = 'Select';
+        selectButton5.classList.remove('selectedButton5');
+        totalPrice1 -= productPrice;
+        chapters -= productPrice1;
+        count--;
         selectedImages["selectedImage5"] = true;
     } else {
-        count--;
-        chapters -= productPrice1;
-        totalPrice1 -= productPrice;
+        selectButton5.classList.add('selectedButton5');
+        selectButton5.textContent = 'Selected';
+        count++;
+        chapters += productPrice1;
+        totalPrice1 += productPrice;
         selectedImages["selectedImage5"] = false;
     }
 
@@ -118,6 +156,7 @@ function changeShade5() {
 }
 function changeShade6() {
     var image = document.getElementById('selectedImage6');
+    var selectButton6 = document.getElementById('selectButton6');
     image.classList.toggle('selected');
 
 
@@ -126,14 +165,18 @@ function changeShade6() {
     var productPrice1 = 49;
 
     if (image.classList.contains('selected')) {
-        totalPrice1 += productPrice;
-        chapters += productPrice1;
-        count++;
+        selectButton6.textContent = 'Select';
+        selectButton6.classList.remove('selectedButton6');
+        totalPrice1 -= productPrice;
+        chapters -= productPrice1;
+        count--;
         selectedImages["selectedImage6"] = true;
     } else {
-        count--;
-        chapters -= productPrice1;
-        totalPrice1 -= productPrice;
+        selectButton6.classList.add('selectedButton6');
+        selectButton6.textContent = 'Selected';
+        count++;
+        chapters += productPrice1;
+        totalPrice1 += productPrice;
         selectedImages["selectedImage6"] = false;
     }
 
