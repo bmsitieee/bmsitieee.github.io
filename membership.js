@@ -1,7 +1,9 @@
 
 //billing and shading image(product) when selected
 var count = 0;
-var totalPrice = 1370;
+var totalPrice1 = 1370;
+var totalPrice = 0;
+var chapters =0;
 var selectedImages = {
     "selectedImage1": false,
     "selectedImage2": false,
@@ -15,19 +17,22 @@ function changeShade1() {
     var image = document.getElementById('selectedImage1');
     image.classList.toggle('selected');
     var productPrice = 392;
+    var productPrice1 = 412;//price1 can be higher than price but not the other way
 
     if (image.classList.contains('selected')) {
-        totalPrice += productPrice;
+        totalPrice1 += productPrice;
+        chapters += productPrice1;
         count++;
         selectedImages["selectedImage1"] = true;
 
     } else {
-        totalPrice -= productPrice;
+        totalPrice1 -= productPrice;
+        chapters -= productPrice1;
         count--;
         selectedImages["selectedImage1"] = false;
     }
 
-    updatePriceBox(totalPrice);
+    updatePriceBox(totalPrice1);
 }
 
 function changeShade2() {
@@ -35,68 +40,81 @@ function changeShade2() {
     image.classList.toggle('selected');
 
     var productPrice = 49;
+    var productPrice1 = 49;
 
     if (image.classList.contains('selected')) {
-        totalPrice += productPrice;
+        totalPrice1 += productPrice1;
+        chapters += productPrice;
         count++;
         selectedImages["selectedImage2"] = true;
     } else {
+        
+        chapters -= productPrice1;
         count--;
-        totalPrice -= productPrice;
+        totalPrice1 -= productPrice;
         selectedImages["selectedImage2"] = false;
     }
-    updatePriceBox(totalPrice);
+    updatePriceBox(totalPrice1);
 }
 function changeShade3() {
     var image = document.getElementById('selectedImage3');
     image.classList.toggle('selected');
     var productPrice = 49;
+    var productPrice1 = 49;
 
     if (image.classList.contains('selected')) {
-        totalPrice += productPrice;
+        totalPrice1 += productPrice;
+        chapters += productPrice1;
         count++;
         selectedImages["selectedImage3"] = true;
     } else {
         count--;
-        totalPrice -= productPrice;
+        totalPrice1 -= productPrice;
+        chapters -= productPrice1;
         selectedImages["selectedImage3"] = false;
     }
 
-    updatePriceBox(totalPrice);
+    updatePriceBox(totalPrice1);
 }
 function changeShade4() {
     var image = document.getElementById('selectedImage4');
     image.classList.toggle('selected');
     var productPrice = 234;
+    var productPrice1 = 234;
 
     if (image.classList.contains('selected')) {
-        totalPrice += productPrice;
+        totalPrice1 += productPrice;
+        chapters += productPrice1;
         count++;
         selectedImages["selectedImage4"] = true;
     } else {
         count--;
-        totalPrice -= productPrice;
+        chapters -= productPrice;
+        totalPrice1 -= productPrice1;
         selectedImages["selectedImage4"] = false;
     }
 
-    updatePriceBox(totalPrice);
+    updatePriceBox(totalPrice1);
 }
 function changeShade5() {
     var image = document.getElementById('selectedImage5');
     image.classList.toggle('selected');
     var productPrice = 490;
+    var productPrice1 = 490;
 
     if (image.classList.contains('selected')) {
-        totalPrice += productPrice;
+        totalPrice1 += productPrice;
+        chapters += productPrice1;
         count++;
         selectedImages["selectedImage5"] = true;
     } else {
         count--;
-        totalPrice -= productPrice;
+        chapters -= productPrice1;
+        totalPrice1 -= productPrice;
         selectedImages["selectedImage5"] = false;
     }
 
-    updatePriceBox(totalPrice);
+    updatePriceBox(totalPrice1);
 }
 function changeShade6() {
     var image = document.getElementById('selectedImage6');
@@ -104,18 +122,22 @@ function changeShade6() {
 
 
     var productPrice = 49;
+    
+    var productPrice1 = 49;
 
     if (image.classList.contains('selected')) {
-        totalPrice += productPrice;
+        totalPrice1 += productPrice;
+        chapters += productPrice1;
         count++;
         selectedImages["selectedImage6"] = true;
     } else {
         count--;
-        totalPrice -= productPrice;
+        chapters -= productPrice1;
+        totalPrice1 -= productPrice;
         selectedImages["selectedImage6"] = false;
     }
 
-    updatePriceBox(totalPrice);
+    updatePriceBox(totalPrice1);
 }
 
 
@@ -189,18 +211,25 @@ function calculateTotalPrice(totalPrice) {
     var discount = 0;
     if (count >= 2)
         discount = 0.05;
+    totalPrice=totalPrice1;//If no discount(no/one chapter selected)
     if (discount == 0.05) {
-        totalPrice = totalPrice - (totalPrice * discount);
-        totalPrice = Math.ceil(totalPrice);
-        totalPrice = Math.max(totalPrice, 1370); // Ensure totalPrice doesn't go below zero
+
+
+
+        totalPrice = chapters * 0.95;
+        totalPrice = Math.ceil(totalPrice);//round off to higher
+        totalPrice += 1370;
+
+
+
     }
     var disc = document.getElementById('disc');
     disc.textContent = 'Total Price: INR. ' + totalPrice.toFixed(2);
 }
 
-function updatePriceBox(totalPrice) {
+function updatePriceBox(totalPrice1) {
     var priceBox = document.getElementById('priceBox');
-    priceBox.textContent = 'Total Price: INR. ' + totalPrice.toFixed(2); // Format to two decimal places
+    priceBox.textContent = 'Total Price: INR. ' + totalPrice1.toFixed(2); // Format to two decimal places
 }
 
 
