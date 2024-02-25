@@ -95,19 +95,13 @@ a:hover {
     background-color: #fff;
     color: #6a1f9a;
 } 
-#selectedImage {
+#selectedImage1,#selectedImage2,#selectedImage3,#selectedImage4,#selectedImage5,#selectedImage6 {
     margin-top: 10px; /* Adjust the margin as needed */
     transition: filter 0.3s ease-in-out;
 }
 button {
     margin-top: 10px; /* Adjust the margin as needed */
 }
-
-#selectedImage {
-    margin-top: 10px; /* Adjust the margin as needed */
-    transition: filter 0.3s ease-in-out;
-}
-
 .selected {
     filter: grayscale(100%);
 }
