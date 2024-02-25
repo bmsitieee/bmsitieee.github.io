@@ -260,10 +260,11 @@ function executeGoogleFormsSubmit() {
 
     const chapters = ["CS", "SPS", "ITS", "CIS", "RAS", "PES"];
     for (var i = 0; i < chapters.length; i++) {
-        if (selectedImages["selectedImage" + i]) {
+        if (selectedImages["selectedImage" + (i + 1)]) { // Adjust the index here
             formData.append("entry.1729285030", chapters[i]);
         }
     }
+
 
     // Check for empty fields
     for (var value of formData.values()) {
@@ -307,15 +308,17 @@ function executeGoogleFormsSubmit() {
     document.getElementById("dob").value = "";
     document.getElementById("branch").value = "option0";
 
-    for (var i = 1; i < 7; i++) {
+    for (var i = 1; i <= chapters.length; i++) { // Adjust the loop to go up to chapters.length
         if (selectedImages["selectedImage" + i]) {
-            document.getElementById("selectedImage" + (i)).classList.remove("selected");
+            document.getElementById("selectedImage" + i).classList.remove("selected");
             selectedImages["selectedImage" + i] = false;
         }
     }
+
     totalPrice = 1370;
     updatePriceBox(totalPrice);
     count = 0;
     calculateTotalPrice(totalPrice);
 }
 
+   
