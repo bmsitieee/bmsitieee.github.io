@@ -30,7 +30,7 @@ function changeShade1() {
         
         selectButton1.classList.remove('selectedButton1');
         count--;
-        selectedImages["selectedImage1"] = true;
+        selectedImages["selectedImage1"] = false;
 
     } else {
 
@@ -41,7 +41,7 @@ function changeShade1() {
         selectButton1.classList.add('selectedButton1');
         count++;
         selectButton1.textContent = 'Selected';
-        selectedImages["selectedImage1"] = false;
+        selectedImages["selectedImage1"] = true;
     }
 
     updatePriceBox(totalPrice1);
@@ -62,7 +62,7 @@ function changeShade2() {
         
         selectButton2.classList.remove('selectedButton2');
         count--;
-        selectedImages["selectedImage2"] = true;
+        selectedImages["selectedImage2"] = false;
     } else {
         
         selectButton2.classList.add('selectedButton2');
@@ -70,7 +70,7 @@ function changeShade2() {
         count++;
         selectButton2.textContent = 'Selected';
         totalPrice1 += productPrice;
-        selectedImages["selectedImage2"] = false;
+        selectedImages["selectedImage2"] = true;
     }
     updatePriceBox(totalPrice1);
 }
@@ -87,7 +87,7 @@ function changeShade3() {
         selectButton3.classList.remove('selectedButton3');
         chapters -= productPrice1;
         count--;
-        selectedImages["selectedImage3"] = true;
+        selectedImages["selectedImage3"] = false;
     } else {
         
         selectButton3.classList.add('selectedButton3');
@@ -95,7 +95,7 @@ function changeShade3() {
         selectButton3.textContent = 'Selected';
         totalPrice1 += productPrice;
         chapters += productPrice1;
-        selectedImages["selectedImage3"] = false;
+        selectedImages["selectedImage3"] = true;
     }
 
     updatePriceBox(totalPrice1);
@@ -115,7 +115,7 @@ function changeShade4() {
         
         selectButton4.classList.remove('selectedButton4');
         count--;
-        selectedImages["selectedImage4"] = true;
+        selectedImages["selectedImage4"] = false;
     } else {
         
         selectButton4.classList.add('selectedButton4');
@@ -123,7 +123,7 @@ function changeShade4() {
         count++;
         chapters += productPrice;
         totalPrice1 += productPrice1;
-        selectedImages["selectedImage4"] = false;
+        selectedImages["selectedImage4"] = true;
     }
 
     updatePriceBox(totalPrice1);
@@ -142,14 +142,14 @@ function changeShade5() {
         totalPrice1 -= productPrice;
         chapters -= productPrice1;
         count--;
-        selectedImages["selectedImage5"] = true;
+        selectedImages["selectedImage5"] = false;
     } else {
         selectButton5.classList.add('selectedButton5');
         selectButton5.textContent = 'Selected';
         count++;
         chapters += productPrice1;
         totalPrice1 += productPrice;
-        selectedImages["selectedImage5"] = false;
+        selectedImages["selectedImage5"] = true;
     }
 
     updatePriceBox(totalPrice1);
@@ -170,14 +170,14 @@ function changeShade6() {
         totalPrice1 -= productPrice;
         chapters -= productPrice1;
         count--;
-        selectedImages["selectedImage6"] = true;
+        selectedImages["selectedImage6"] = false;
     } else {
         selectButton6.classList.add('selectedButton6');
         selectButton6.textContent = 'Selected';
         count++;
         chapters += productPrice1;
         totalPrice1 += productPrice;
-        selectedImages["selectedImage6"] = false;
+        selectedImages["selectedImage6"] = true;
     }
 
     updatePriceBox(totalPrice1);
@@ -277,7 +277,7 @@ function updatePriceBox(totalPrice1) {
 
 
 // Google Forms Submit
-function executeGoogleFormsSubmit() {
+async function executeGoogleFormsSubmit() {
     var formFields = {
         "entry.1884265043": "name",
         "entry.332621004": "email",
@@ -308,7 +308,6 @@ function executeGoogleFormsSubmit() {
         }
     }
 
-
     // Check for empty fields
     for (var value of formData.values()) {
         if (value === "") {
@@ -317,51 +316,26 @@ function executeGoogleFormsSubmit() {
         }
     }
 
-    // Create a form and append to body
-    var form = document.createElement("form");
-    form.method = "POST";
-    form.action = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSc9j9rrJspdVSeb0XsEEY8XRwKqdi2WwJu1vOZ-NDGlXQhQHA/formResponse";
-    form.target = "_blank"; // Open in a new tab
-    form.onsubmit = function() {
-        setTimeout(function() { window.close(); }, 500); // Close the tab after 5 seconds
-    }
+    // Use Fetch API to send the form data
+    try {
+        const response = await fetch("https://docs.google.com/forms/u/0/d/e/1FAIpQLSc9j9rrJspdVSeb0XsEEY8XRwKqdi2WwJu1vOZ-NDGlXQhQHA/formResponse", {
+            method: "POST",
+            body: formData,
+            mode: 'no-cors' // 'cors' by default
+        });
 
-    // Add form fields
-    for (var pair of formData.entries()) {
-        var input = document.createElement("input");
-        input.type = "hidden";
-        input.name = pair[0];
-        input.value = pair[1];
-        form.appendChild(input);
-    }
-
-    // Append form to body and submit
-    document.body.appendChild(form);
-    form.submit();
-
-    // Clean up - remove form from body
-    document.body.removeChild(form);
-
-    // Reset the form
-    document.getElementById("name").value = "";
-    document.getElementById("email").value = "";
-    document.getElementById("year").value = "";
-    document.getElementById("phone").value = "";
-    document.getElementById("utr").value = "";
-    document.getElementById("dob").value = "";
-    document.getElementById("branch").value = "option0";
-
-    for (var i = 1; i <= chapters.length; i++) { // Adjust the loop to go up to chapters.length
-        if (selectedImages["selectedImage" + i]) {
-            document.getElementById("selectedImage" + i).classList.remove("selected");
-            selectedImages["selectedImage" + i] = false;
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
         }
+
+        // Show success message
+        alert("Form submitted successfully!");
+    } catch (error) {
+        console.error('There was a problem with the fetch operation: ' + error.message);
     }
 
-    totalPrice = 1370;
-    updatePriceBox(totalPrice);
-    count = 0;
-    calculateTotalPrice(totalPrice);
-}
+    alert("Form submitted successfully!");
 
-   
+    // reload the page
+    location.reload();
+}
