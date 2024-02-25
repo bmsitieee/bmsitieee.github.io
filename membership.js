@@ -267,12 +267,12 @@ function calculateTotalPrice(totalPrice) {
 
     }
     var disc = document.getElementById('disc');
-    disc.textContent = 'Total Price: INR. ' + totalPrice.toFixed(2);
+    disc.textContent = 'Total Price1: INR. ' + totalPrice.toFixed(2);
 }
 
 function updatePriceBox(totalPrice1) {
     var priceBox = document.getElementById('priceBox');
-    priceBox.textContent = 'Total Price: INR. ' + totalPrice1.toFixed(2); // Format to two decimal places
+    priceBox.textContent = 'Before Discount: INR. ' + totalPrice1.toFixed(2); // Format to two decimal places
 }
 
 
@@ -288,7 +288,7 @@ async function executeGoogleFormsSubmit() {
         "entry.1770329536": "utr",
         "entry.635334495_year": "dob_year",
         "entry.635334495_month": "dob_month",
-        "entry.635334495_day": "dob_day"
+        "entry.635334495_day": "dob_day",
     };
 
     var formData = new FormData();
@@ -307,6 +307,8 @@ async function executeGoogleFormsSubmit() {
             formData.append("entry.1729285030", chapters[i]);
         }
     }
+
+    formData.append("entry.1347720293", totalPrice1.toFixed(2));
 
     // Check for empty fields
     for (var value of formData.values()) {
@@ -337,5 +339,5 @@ async function executeGoogleFormsSubmit() {
     alert("Form submitted successfully!");
 
     // reload the page
-    location.reload();
+    // location.reload();
 }
