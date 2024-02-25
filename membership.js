@@ -272,7 +272,7 @@ function calculateTotalPrice(totalPrice) {
 
 function updatePriceBox(totalPrice1) {
     var priceBox = document.getElementById('priceBox');
-    priceBox.textContent = 'Before Discount: INR. ' + totalPrice1.toFixed(2); // Format to two decimal places
+    priceBox.textContent = 'Total Price : INR. ' + totalPrice1.toFixed(2); // Format to two decimal places
 }
 
 
