@@ -146,3 +146,16 @@ button {
 {
     background-color: black;
 }
+
+
+
+#priceBox, #disc {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 18px;
+    text-align: center;
+    color: #333;
+}

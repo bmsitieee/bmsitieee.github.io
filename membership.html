@@ -58,9 +58,9 @@
           </div>
           <div class="row justify-content-center">
             <div class="col-md-8">
-                <label for="options">
+                <label for="1options">
                     Enter your Branch:</label>
-        <select id="options">
+        <select id="branch">
             <option value="option0" selected>Select</option>
             <option value="option1">CSE</option>
             <option value="option2">ISE</option>
@@ -79,9 +79,9 @@
 
           <div class="row justify-content-center">
             <div class="col-md-8">
-                <label for="options">
+                <label for="2options">
                     Enter your Gender:</label>
-        <select id="options">
+        <select id="gender">
             <option value="M">M</option>
             <option value="F">F</option>
 
@@ -117,7 +117,7 @@
               <div class="card-body d-flex flex-column">
                 <div>
                   <h5 class="card-title">Computer Society</h5>
-                  <p class="card-text"> INR. 331
+                  <p class="card-text"> INR. 392
                     <img src="pics/info.svg" alt="info" onclick="toggleInfo1()"> <div id="infoBox1" class="info-container">
                     <p>This is the information box. You can put any information or content here.</p>
                 </div></p>
@@ -132,7 +132,7 @@
               <div class="card-body d-flex flex-column">
                 <div>
                   <h5 class="card-title">Signal Processing Society</h5>
-                  <p class="card-text">INR. 50
+                  <p class="card-text">INR. 49
                     <img src="pics/info.svg" alt="info" onclick="toggleInfo2()"> <div id="infoBox2" class="info-container">
                         <p>This is the information box. You can put any information or content here.</p>
                     </div>
@@ -148,7 +148,7 @@
               <div class="card-body d-flex flex-column">
                 <div>
                   <h5 class="card-title">Information Theory Society</h5>
-                  <p class="card-text">INR. 50
+                  <p class="card-text">INR. 49
                     <img src="pics/info.svg" alt="info" onclick="toggleInfo3()"> <div id="infoBox3" class="info-container">
                         <p>Elevate your expertise in information theory with the IEEE Information Theory Society! Join our global network of pioneers, access exclusive resources, and lead the charge in revolutionizing communication and data science. Seize the opportunity to make a lasting impact – join us today!</p>
                     </div>
@@ -164,7 +164,7 @@
               <div class="card-body d-flex flex-column">
                 <div>
                   <h5 class="card-title">Computational Intelligence Society</h5>
-                  <p class="card-text">INR. 198
+                  <p class="card-text">INR. 234
                     <img src="pics/info.svg" alt="info" onclick="toggleInfo4()"> <div id="infoBox4" class="info-container">
                         <p>This is the information box. You can put any information or content here.</p>
                     </div>
@@ -182,7 +182,7 @@
                   <div class="card-body d-flex flex-column">
                     <div>
                       <h5 class="card-title">Robotics and Automation Society</h5>
-                      <p class="card-text">INR. 415
+                      <p class="card-text">INR. 490
                         <img src="pics/info.svg" alt="info" onclick="toggleInfo5()"> <div id="infoBox5" class="info-container">
                             <p>This is the information box. You can put any information or content here.</p>
                         </div>
@@ -198,7 +198,7 @@
                   <div class="card-body d-flex flex-column">
                     <div>
                       <h5 class="card-title">Power and Energy Society</h5>
-                      <p class="card-text">INR. 50
+                      <p class="card-text">INR. 49
                         <img src="pics/info.svg" alt="info" onclick="toggleInfo6()"> <div id="infoBox6" class="info-container">
                             <p>This is the information box. You can put any information or content here.</p>
                         </div>
@@ -227,13 +227,20 @@
 
 
 
-
+        <div class="row">
+          <div class="col-md-3">
+       <div id="priceBox">Total Price: INR. 1370</div></div></div>
+       <div class="row">
+         <div class="col-md-3">
+      <div id="disc">
+        <button class="calculate" onclick="calculateTotalPrice(totalPrice)">Calculate discount </button><br> Total Price: INR. 1370</div></div></div>
 
 
 
         </div>
         <div class="container">
-            *Chapter Membership prices marked are not inclusive of taxes, for any other chapters please visit the <a href="https://www.ieee.org/" target="_blank">IEEE Home page</a>
+            *You get 5% discount on the chapters when you add more than one chapter<br>
+            **If you are interested in any other chapters, please visit the <a href="https://www.ieee.org/" target="_blank">IEEE Home page</a>
         </div><br>
 
         
