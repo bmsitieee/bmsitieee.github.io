@@ -307,9 +307,9 @@ function executeGoogleFormsSubmit() {
     document.getElementById("dob").value = "";
     document.getElementById("branch").value = "option0";
 
-    for (var i = 0; i < chapters.length; i++) {
+    for (var i = 1; i < 7; i++) {
         if (selectedImages["selectedImage" + i]) {
-            document.getElementById("selectedImage" + (i + 1)).classList.remove("selected");
+            document.getElementById("selectedImage" + (i)).classList.remove("selected");
             selectedImages["selectedImage" + i] = false;
         }
     }
