@@ -1,0 +1,57 @@
+
+.sidenav{
+	font-family:"Comic Sans MS";
+	top:0;
+	background-color:black;
+	height:100%;
+	position:fixed;
+	width:20%;
+	z-index:1;
+	left:0;
+	overflow-x:hidden;
+}
+span{
+	color:black;
+}
+.sidenav a{
+	transition: all 0.2s;
+	color:gray;
+	font-size:20px;
+	padding:30px 28px;
+	text-decoration:none;
+	display:block;
+}
+.sidenav a:hover{
+	color:white;
+	font-size:23px;
+}
+.sidenav .closebtn{
+	position:absolute;
+	color:gray;
+	right:0;
+	top:-30px;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333; /* Updated background color */
+    color: #fff; /* Updated text color */
+    width: 100%;
+}
+
+.footer a {
+    color: #ccc; /* Set the color of the links */
+}
+
+
+@media screen and (max-width: 600px) {
+    .sidenav a {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .container {
+        padding-top: 80px;
+    }
+}

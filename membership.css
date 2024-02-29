@@ -1,0 +1,170 @@
+.head1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto; 
+}
+a {
+    color: black; /* Change to the desired color */
+    text-decoration: none; /* Remove underline */
+}
+a:hover {
+    text-decoration: underline; /* Add underline on hover if needed */
+}
+#apple {
+    background: linear-gradient(45deg, white, gold);
+    /* Standard syntax */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    font-size: large;
+    position: relative;
+}
+
+.disclaimer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px; /* Adjust the padding as needed */
+    background-color: gold;
+    background: linear-gradient(45deg, white, gold);
+    color: #0E5D7B; /* Adjust the text color as needed */
+}
+
+.card {
+    background-color: #3c3c3c;
+    border-color: #2d2d2d;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 100%;
+}
+
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 16px;
+    color: #999;
+    
+}
+
+.btn-primary {
+    background-color: #8a2be2;
+    border-color: #8a2be2;
+}
+
+.btn-primary:hover {
+    background-color: #6a1f9a;
+    border-color: #6a1f9a;
+}
+
+
+.btn-outline-light {
+    border-color: #fff;
+    color: #fff;
+}
+
+.btn-outline-light:hover {
+    background-color: #fff;
+    color: #6a1f9a;
+} 
+#selectedImage1,#selectedImage2,#selectedImage3,#selectedImage4,#selectedImage5,#selectedImage6 {
+    margin-top: 10px; /* Adjust the margin as needed */
+    transition: filter 0.3s ease-in-out;
+}
+button {
+    margin-top: 10px; /* Adjust the margin as needed */
+}
+.selected {
+    filter: grayscale(100%);
+}
+.info-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.info-container.show {
+    display: block;
+}
+
+
+.whatsapp-btn {
+    height: 20px;
+    width: 20px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    /* background-color: #25D366; */
+    color: white;
+    border-radius: 50%;
+    padding: 40px;
+    font-size: 20px;
+    text-align: center;
+    z-index: 1000;
+}
+.header
+{
+    background-color: black;
+}
+
+
+
+#priceBox, #disc {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 18px;
+    text-align: center;
+    color: #333;
+}
+.discc {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 18px;
+    text-align: center;
+    color: #333;
+}
+.selectedButton1, .selectedButton2,.selectedButton3,.selectedButton4,.selectedButton5,.selectedButton6{
+    background-color: green;
+    color: white;
+}
+

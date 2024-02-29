@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="membership.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>IEEE | BMSIT</title>
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css"
+    integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+
+</head>
+
+<body>
+<!--   <h1>It closed</h1> -->
+  <div class="header"><br> <img class="head1" src="pics/head2.jpg"><br></div>
+  
+  <h1 class="text-center my-4 m-5">MEMBERSHIP</h1>
+  <div class="row justify-content-center m-4">
+    <div class="col-md-6 col-sm-12">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <p class="form-description"><b>Sorry, the membership forms are now closed. Kindly follow <a href="https://www.instagram.com/bmsit_ieee/"> @bmsit_ieee</a> on instagram to get updates.</b></p>
+        </div>
+      </div>
+      <!--<div class="row justify-content-center">
+        <div class="col-md-8">
+          Enter your name
+          <input type="text" id="name" class="form-control mb-3" style="margin-bottom: 10px;"
+            placeholder="First Name and Last/Surname mandatory">
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          Enter your email
+          <input type="text" id="email" class="form-control mb-3" style="margin-bottom: 10px;" placeholder="Email-id">
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          Enter your Date of Birth
+          <input type="date" id="dob" class="form-control mb-3" style="margin-bottom: 10px;"
+            placeholder="Enter your DOB">
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          Enter your Year of graduation
+          <input type="number" id="year" class="form-control mb-3" style="margin-bottom: 10px;" placeholder="Year"
+            value="2025" min="2024" max="2027">
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          Enter your Phone number
+          <input type="text" id="phone" class="form-control mb-3" style="margin-bottom: 10px;"
+            placeholder="Phone number">
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <label for="1options">
+            Enter your Branch:</label>
+          <select id="branch">
+            <option value="option0" selected>Select</option>
+            <option value="CSE">CSE</option>
+            <option value="ISE">ISE</option>
+            <option value="AIML">AIML</option>
+            <option value="ECE">ECE</option>
+            <option value="MECH">MECH</option>
+            <option value="CIVIL">CIVIL</option>
+            <option value="ETE">ETE</option>
+            <option value="EEE">EEE</option>
+          </select>
+        </div>
+      </div><br>
+
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <label for="2options">
+            Enter your Gender:</label>
+          <select id="gender">
+            <option value="MALE">M</option>
+            <option value="FEMALE">F</option>
+          </select>
+        </div>
+      </div><br>
+
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div id="apple"
+            style="height: 200px; width: auto; background-color: #0E5D7B; margin-top: 0px; position: relative;">
+            <h1>IEEE</h1>
+            <div class="disclaimer">*Base membership of INR.1370 mandatory</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+    <script src="membership.js"></script>
+
+    <h4 class="text-center my-4 m-5">CHAPTERS</h4>
+    <div class="row">
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card">
+          <img id="selectedImage1" class="logo selected" src="pics/ciss.png" class="card-img-top" alt="cs">
+          <div class="card-body d-flex flex-column">
+            <div>
+              <h5 class="card-title">Computer Society</h5>
+              <p class="card-text"> INR. 392
+                <img src="pics/info.svg" alt="info" onclick="toggleInfo1()">
+              <div id="infoBox1" class="info-container">
+                <p> We're a community of technology enthusiasts, professionals, and researchers dedicated to advancing computer science and engineering. Join us for networking, workshops, and collaboration opportunities to explore emerging trends and shape the future of technology together.</p>
+              </div>
+              </p>
+            </div>
+            <button id="selectButton1" onclick="changeShade1()">Select</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card">
+          <img id="selectedImage2" class="logo selected" src="pics/sps.png" class="card-img-top" alt="sps">
+          <div class="card-body d-flex flex-column">
+            <div>
+              <h5 class="card-title">Signal Processing Society</h5>
+              <p class="card-text">INR. 49
+                <img src="pics/info.svg" alt="info" onclick="toggleInfo2()">
+              <div id="infoBox2" class="info-container">
+                <p>Amplify your mastery in signal processing with the IEEE Signal Processing Society, at the forefront of electronics innovation. Explore exclusive opportunities, connect with industry visionaries, and shape the future of technology. Join us now and redefine the boundaries of electronics excellence!</p>
+              </div>
+              </p>
+            </div>
+            <button id="selectButton2" onclick="changeShade2()">Select</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card">
+          <img id="selectedImage3" class="logo selected" src="pics/its.png" class="card-img-top" alt="its">
+          <div class="card-body d-flex flex-column">
+            <div>
+              <h5 class="card-title">Information Theory Society</h5>
+              <p class="card-text">INR. 49
+                <img src="pics/info.svg" alt="info" onclick="toggleInfo3()">
+              <div id="infoBox3" class="info-container">
+                <p>Elevate your expertise in information theory with the IEEE Information Theory Society! Join our
+                  global network of pioneers, access exclusive resources, and lead the charge in revolutionizing
+                  communication and data science. Seize the opportunity to make a lasting impact - - - join us today!</p>
+              </div>
+              </p>
+            </div>
+            <button id="selectButton3" onclick="changeShade3()">Select</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card">
+          <img id="selectedImage4" class="logo selected" src="pics/cis.png" class="card-img-top" alt="cis">
+          <div class="card-body d-flex flex-column">
+            <div>
+              <h5 class="card-title">Computational Intelligence Society</h5>
+              <p class="card-text">INR. 234
+                <img src="pics/info.svg" alt="info" onclick="toggleInfo4()">
+              <div id="infoBox4" class="info-container">
+                <p>Explore the exciting field of computational intelligence with us! Our chapter provides a platform for learning, discussion, and collaboration among researchers, professionals, and students interested in artificial intelligence, machine learning, and related areas.</p>
+              </div>
+              </p>
+            </div>
+            <button id="selectButton4" onclick="changeShade4()">Select</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 col-sm-6">
+        <div class="card">
+          <img id="selectedImage5" class="logo selected" src="pics/ras.png" class="card-img-top" alt="ras">
+          <div class="card-body d-flex flex-column">
+            <div>
+              <h5 class="card-title">Robotics and Automation Society</h5>
+              <p class="card-text">INR. 490
+                <img src="pics/info.svg" alt="info" onclick="toggleInfo5()">
+              <div id="infoBox5" class="info-container">
+                <p>Dive into the world of robotics and automation with us! Our chapter brings together experts and enthusiasts to explore the latest developments, share knowledge, and collaborate on innovative projects shaping the future of robotics.</p>
+              </div>
+              </p>
+            </div>
+            <button id="selectButton5" onclick="changeShade5()">Select</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card">
+          <img id="selectedImage6" class="logo selected" src="pics/pes.png" class="card-img-top" alt="pes">
+          <div class="card-body d-flex flex-column">
+            <div>
+              <h5 class="card-title">Power and Energy Society</h5>
+              <p class="card-text">INR. 49
+                <img src="pics/info.svg" alt="info" onclick="toggleInfo6()">
+              <div id="infoBox6" class="info-container">
+                <p>Power up with our PES chapter! We're passionate about advancing the field of power and energy engineering through networking events, workshops, and knowledge sharing. Join us to explore the latest trends and technologies driving the energy revolution.</p>
+              </div>
+              </p>
+            </div>
+            <button id="selectButton6" onclick="changeShade6()">Select</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Add the total price box here with calculation and upload proof of payment-->
+    <!--<div class="row justify-content-center mt-5">
+      <div class="col-md-3">
+        <div id="priceBox">Total Price: INR. 1370</div>
+      </div>
+    </div> 
+  <!-- 
+    <div class="row justify-content-center">
+      <div class="col-md-3"><br><div class="discc">
+        <button class="calculate justify-content-center" onclick="calculateTotalPrice(totalPrice)">Calculate discount </button>
+        <div id="disc">
+          <br> Total
+          Price: INR. 1370
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+ <div class="container">
+    *You get 5% discount on the chapters when you add more than one chapter<br>
+    **If you are interested in any other chapters, please visit the <a href="https://www.ieee.org/" target="_blank">IEEE
+      Home page</a>
+  </div><br> 
+  
+  <div class="row justify-content-center">
+    <div class="col-md-3">
+      <img src="pics/pay.png">
+    </div></div>
+
+
+
+  <div class="row justify-content-center">
+    <div class="col-md-3 col-sm-6">
+      Enter proof of payment
+      <input type="text" id="utr" class="form-control mb-3" style="margin-bottom: 10px;" placeholder="UTR no.">
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div>
+        <button id="submit-issue" type="button" class="btn btn-primary d-block mx-auto" style="margin-bottom: 10px;"
+          onclick="executeGoogleFormsSubmit()">Submit</button>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+
+  <!-- Bootstrap JS and Popper.js CDN (order matters) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <!-- Footer -->
+  <div class="text-center text-lg-start bg-dark text-muted"><section class="d-flex justify-content-center p-4 border-bottom">
+    <div class="row">
+          <h2>Reach Us:</h2><br>
+        
+          <div class="col-sm-3 col-lg-6">
+            SB CHAIR : +91 95138 01415<br>
+            ITS CHAIR : +91 89517 48395<br>
+            CS CHAIR : +91 9972553046<br>
+            SPS CHAIR : +91 9448665322<br>
+            CIS CHAIR : +91 97425 93111<br>
+            RAS CHAIR : +91 6361196329<BR>
+            Email-id : ieee@bmsit.in
+          </div>
+            </section>
+            <div class="row"> <div class="col-sm-6 col-lg-3">
+            <a href="https://www.linkedin.com/company/ieee-sb-bmsitm/mycompany/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin"
+                viewBox="0 0 16 16">
+                <path
+                  d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+              </svg><br>
+              <!-- LinkedIn icon -->
+            </a>
+            <a href="https://www.instagram.com/bmsit_ieee/" target="_blank">
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram"
+                viewBox="0 0 16 16">
+                <path
+                  d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+              </svg>
+
+              <!-- Instagram icon -->
+            </a><br>
+
+
+            <a href="https://www.youtube.com/@ieeestudentbranchbmsitm8708" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube"
+                viewBox="0 0 16 16">
+                <path
+                  d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z" />
+              </svg><br>
+
+
+            </a>
+           
+            </div>
+            </div>
+            
+
+
+          </div><!--
+<div class="right-corner">
+    <a href="https://chat.whatsapp.com/KZP6QfzdqcuLuEYVQrjflp" class="whatsapp-btn" target="_blank">
+      <img src="pics/1000.png" alt="WhatsApp" style="width: 50px; height: 50px;">
+    </a>
+  </div>-->
+          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+            </script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+            </script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+            </script>
+</body>
+
+</html>
