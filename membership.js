@@ -286,11 +286,7 @@ function executeGoogleFormsSubmit() {
     };
     // Send the POST request with the form data
     xhr.send(new URLSearchParams(formData).toString());
-    // Reset the form
-    document.getElementById("name").value = "";
-    document.getElementById("email").value = "";
-    document.getElementById("year").value = "";
-    document.getElementById("phone").value = "";
-    document.getElementById("branch").value = "";
+
     alert("Your response has been submitted successfully");
+    window.location.reload();
 }
