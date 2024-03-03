@@ -846,17 +846,17 @@ a:hover {
 }
 
 .social-media a:hover{
-	background: #FF4C0F;	
+	text-decoration: none;
+	font-size: 2.1rem;
 }
 
 
 .social-media a i{
-	transition: 0.4s all;	
+	transition: 0.1s all;	
 }
 
-.social-media a:hover >i{
-	
-	transform: scale(1.6) rotate(25deg); 
+.itslogo{
+	padding-left: 15%;
 }
 
 .footer-menu-one{
@@ -1198,13 +1198,13 @@ display: flex;
 	justify-content: center;
 	line-height: 180%;
 	text-align: center;
-	font-size:150%;
+	font-size:1.2rem;
 
 }
 
 
 .pics1{	
-	height: 400px;
+	height: 300px;
 	position: relative;
 	top: 17%;
 	width: 45%;
@@ -1295,10 +1295,7 @@ display: flex;
 	height: 100%; 	
 }
 
-.oo1, .tt1, .th1{
-	width: 100%;
-	height: 100%;
-}
+
 
 .one, .two, .three{
   	width: 20%;	
@@ -1310,17 +1307,8 @@ display: flex;
 }
 
 .one1, .two1, .three1{
-	
-	
-    width: 20%;	
-    height: 100%;
-    perspective: 1000px;
-    display: inline-block;
-    margin: 6%;
-	margin-bottom: 2%;
-    border: solid;
-	border-width: 1px;
-	border-color: grey;
+	padding: auto;
+	padding-bottom: 10px;
 	text-align: center;
 	color: #333;
 	
@@ -1755,7 +1743,7 @@ a.gaurav{
 .pics2{	
 
 	width: 100%;
-	height: 60vh;
+	height: 100%;
 	overflow: hidden;
     
 	
@@ -2139,3 +2127,14 @@ button:hover {
 	font-weight: bold;
 }
 
+.card {
+    background-color: #3c3c3c;
+    border-color: #2d2d2d;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 100%;
+}
