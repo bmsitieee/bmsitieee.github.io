@@ -255,6 +255,10 @@ function executeGoogleFormsSubmit() {
             formData.append("entry.1729285030", chapters[i]);
         }
     }
+
+    // add the amount to the form data
+    formData.append("entry.1347720293", totalPrice1);
+
     // Check for empty fields
     for (var value of formData.values()) {
         if (value === "") {
@@ -262,10 +266,18 @@ function executeGoogleFormsSubmit() {
             return;
         }
     }
+
+    // // print the form data
+    // for (var pair of formData.entries()) {
+    //     console.log(pair[0] + ', ' + pair[1]);
+    // }
+
     // Create a new XMLHttpRequest object
     var xhr = new XMLHttpRequest();
     // Set the request method and URL
     xhr.open("POST", "https://docs.google.com/forms/u/0/d/e/1FAIpQLSc9j9rrJspdVSeb0XsEEY8XRwKqdi2WwJu1vOZ-NDGlXQhQHA/formResponse");
+    // Set the request header
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     // Set the onload event handler
     xhr.onload = function () {
         // Use the response status and text
