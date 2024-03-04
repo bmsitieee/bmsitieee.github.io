@@ -251,7 +251,7 @@ function executeGoogleFormsSubmit() {
     }
     const chapters = ["CS", "SPS", "ITS", "CIS", "RAS", "PES"];
     for (var i = 0; i < chapters.length; i++) {
-        if (selectedImages["selectedImage" + i]) {
+        if (selectedImages["selectedImage" + (i+1)]) {
             formData.append("entry.1729285030", chapters[i]);
         }
     }
