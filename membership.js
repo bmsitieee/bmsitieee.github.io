@@ -9,7 +9,8 @@ var selectedImages = {
     "selectedImage3": false,
     "selectedImage4": false,
     "selectedImage5": false,
-    "selectedImage6": false
+    "selectedImage6": false,
+    "selectedImage7": false
 };
 function changeShade1() {
     var image = document.getElementById('selectedImage1');
@@ -149,6 +150,29 @@ function changeShade6() {
     }
     updatePriceBox(totalPrice1);
 }
+function changeShade7() {
+    var image = document.getElementById('selectedImage7');
+    var selectButton7 = document.getElementById('selectButton7');
+    image.classList.toggle('selected');
+    var productPrice = 20;
+    var productPrice1 = 20;
+    if (image.classList.contains('selected')) {
+        selectButton7.textContent = 'Select';
+        selectButton7.classList.remove('selectedButton7');
+        totalPrice1 -= productPrice;
+        chapters -= productPrice1;
+        count--;
+        selectedImages["selectedImage7"] = false;
+    } else {
+        selectButton7.classList.add('selectedButton7');
+        selectButton7.textContent = 'Selected';
+        count++;
+        chapters += productPrice1;
+        totalPrice1 += productPrice;
+        selectedImages["selectedImage7"] = true;
+    }
+    updatePriceBox(totalPrice1);
+}
 function toggleInfo1() {
     var infoBox = document.getElementById('infoBox1');
     infoBox.classList.toggle('show');
@@ -171,6 +195,10 @@ function toggleInfo5() {
 }
 function toggleInfo6() {
     var infoBox = document.getElementById('infoBox6');
+    infoBox.classList.toggle('show');
+}
+function toggleInfo7() {
+    var infoBox = document.getElementById('infoBox7');
     infoBox.classList.toggle('show');
 }
 // Close info box if clicked outside of it
@@ -206,6 +234,12 @@ document.addEventListener('click', function (event) {
 });
 document.addEventListener('click', function (event) {
     var infoBox = document.getElementById('infoBox6');
+    if (!event.target.matches('img') && !event.target.closest('.info-container')) {
+        infoBox.classList.remove('show');
+    }
+});
+document.addEventListener('click', function (event) {
+    var infoBox = document.getElementById('infoBox7');
     if (!event.target.matches('img') && !event.target.closest('.info-container')) {
         infoBox.classList.remove('show');
     }
@@ -249,7 +283,7 @@ function executeGoogleFormsSubmit() {
         var value = (fieldId.startsWith("dob_")) ? dob[fieldId.split("_")[1] === "year" ? 0 : fieldId.split("_")[1] === "month" ? 1 : 2] : document.getElementById(fieldId).value;
         formData.append(entryId, value);
     }
-    const chapters = ["CS", "SPS", "ITS", "CIS", "RAS", "PES"];
+    const chapters = ["CS", "SPS", "ITS", "CIS", "RAS", "PES", "COMSOC"];
     for (var i = 0; i < chapters.length; i++) {
         if (selectedImages["selectedImage" + (i+1)]) {
             formData.append("entry.1729285030", chapters[i]);
