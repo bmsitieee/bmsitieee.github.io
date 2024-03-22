@@ -750,7 +750,6 @@ header{
 }
 
 .pics2{	
-	height: 100vh;
 	overflow: hidden;
     width: 45%;
 	
@@ -1071,9 +1070,6 @@ display: flex;
 
 
 .pasteve{
-	text-align: center;
-	padding-top: 5.511490898%;
-	padding-bottom: 2%;
 	color: #5d5d5d;
 	font-size: 330%;
 
@@ -1152,7 +1148,7 @@ display: flex;
 }
 
 .pics2{	
-	height: 100vh;
+
 	overflow: hidden;
 	width: 45%;
   } 
@@ -1187,8 +1183,7 @@ display: flex;
 	
 	width: 45%;
 	padding-top:10%;
-	
-	height: 20%;
+	height: 15%;
     background-color: #141A24 ;
 	color: darkorange;
 	align-content: center;
@@ -1705,7 +1700,7 @@ a.gaurav{
 }
 	
 	.content1{
-		height: 400px;
+		height: 200px;
 		font-size: 200px;
 		width: 20%;
 		padding: 3%;
@@ -1776,7 +1771,7 @@ a.gaurav{
 	padding: 4px; 
 	padding-top:7%;
 	width: 100%;
-	height: 580px;
+	height: 200px;
 	background-color: #141A24 ;
 	color: darkorange;
 	align-content: center;
