@@ -338,9 +338,8 @@ header{
 }
 
 .top1{
-    font-size: 330%;
 	padding-top: 5%;
-	margin-bottom: -20%;
+	margin-bottom: -40%;
 	margin-top: -200%;
 }
 /*buttons over */
@@ -652,21 +651,6 @@ header{
 
 
 
-.about{
-	
-	width: 100%;
-	height: 600px;
-	background: #141A24;
-    background-size: cover;
-	display: flex;
-	flex-direction: row;
-	margin-top: -6%;
-	justify-content: space-around;
-	flex-flow: row wrap;
-	flex-wrap: nowrap;
-}
-
-
 .top1{ 
 	
 	justify-content: center;
@@ -674,35 +658,27 @@ header{
 	text-align: center;
 	font-size: 210%;
 	padding-top: 50px;
-	margin-bottom: 12%;
+	margin-bottom: 2%;
 	margin-top: 0px;
 	color: #5d5d5d;
 	
+	font-weight: bold;
 }
 
 .content1{
 	
 	width: 45%;
 	padding-top:5%;
-	height: 20%;
+	height: 15%;
     background-color: #141A24 ;
 	color: darkorange;
 	align-content: center;
 	justify-content: center;
 	line-height: 230%;
-	text-align: center;
 	font-size:150%;
 
 }
 
-
-.pics1{	
-	height: 400px;
-	position: relative;
-	top: 17%;
-	width: 45%;
-	
-	}
 
 
 /* sss awards---------------------------------------------------------------------- */
@@ -721,14 +697,16 @@ header{
 	justify-content: space-around;
 	flex-flow: row wrap;
 	margin-bottom: 5%;
+	border-bottom: 5px solid black;
 }
 
 
 
 
 .top{
+	border-top: 5px solid black;
 	text-align: center;
-	padding: 5% 0% 6% 0%;
+	padding: 5% 0% 6% -2%;
 	color: #5d5d5d;
 	font-size: 190%;
 }
@@ -745,11 +723,13 @@ header{
 }
 
 .COA{
-	line-height: 100%;
+
+	text-decoration: underline;
+	line-height: 110%;
 	
 }
 
-.pics2{	
+.pics2, .pics1{	
 	overflow: hidden;
     width: 45%;
 	
@@ -763,7 +743,7 @@ a:link , a:visited {
 }
 
 a:hover {
-  color: darkorange;
+  color: black;
   background-color: transparent;
   text-decoration: underline;
 }
@@ -918,11 +898,6 @@ a:hover {
 	font-weight: bold;
 }
 
-.
-in:hover{
-	background: #FF4C0F;
-	
-}
 
 .motin a i{
 	transition: 0.4s all;	
@@ -1002,7 +977,6 @@ in:hover{
 
 .upimg:hover .hoverman{
 	z-index: 7;
-	color: orange;
 	
 	position: relative;
 	
@@ -1142,12 +1116,9 @@ display: flex;
 
 } */
 
-.COA{
-	line-height: 100%;
-	
-}
 
-.pics2{	
+
+.pics2 , .pics1{	
 
 	overflow: hidden;
 	width: 45%;
@@ -1169,7 +1140,7 @@ display: flex;
 .about{
 	
 	width: 100%;
-	height: 600px;
+	height: 100vh;
 	background: #141A24;
     background-size: cover;
 	display: flex;
@@ -1197,22 +1168,13 @@ display: flex;
 
 .pics1{	
 	height: 300px;
+	width: 600px;
 	position: relative;
 	top: 17%;
 	width: 45%;
 	
 	}
 
-
-.upimg:hover .hoverman{
-	z-index: 7; 
-	color: orange;
-	
-	position: relative;
-	
-	font-size: 40px;
-	
-}
 
 
 
@@ -1299,6 +1261,7 @@ display: flex;
 }
 
 .one1, .two1, .three1{
+	
 	padding: auto;
 	padding-bottom: 10px;
 	text-align: center;
@@ -1561,9 +1524,6 @@ a.gaurav{
 	font-size: 18px;
 }
 
-.social-media a:hover{
-	background: #FF4C0F;	
-}
 
 .social-media a i{
 	transition: 0.3s all;	
@@ -1706,20 +1666,19 @@ a.gaurav{
 		padding: 3%;
 	}
 	
-	.pics1{
-		height: 40vh;
-	}
 	
 	#contact{
 		font-size: 45px;
 		line-height: 55px;
 		margin-top: 15%;
 	}
-
+.COASUB {
+	text-align: justify !important;
+}
 	
 .COA{
 	position: relative;
-	line-height: 82%;
+	line-height: 170%;
 	text-align: center;
 	align-content: center;	
 	left: 19px;
@@ -1731,8 +1690,22 @@ a.gaurav{
 	width: 300px;
 	
 }
+.COA1{
+	position: relative;
+	line-height: 170%;
+	text-align: justify;
+	align-content: center;	
+	left: 19px;
+	padding: 0px;
+    font-size: 30px;
+	margin-top: 20%;
+	padding-top: 12%;
+	margin: 3%;
+	width: 300px;
+	
+}
 
-.pics2{	
+.pics2, .pics1{	
 
 	width: 100%;
 	height: 100%;
@@ -1782,9 +1755,11 @@ a.gaurav{
 
 }
 	
-	.top1{
+.top1{
+	border: 1px solid black;
+		font-weight: bold;
 	    font-size: 20px;
-		height: 110px;
+		height: 100px;
 		margin-left: 0%;
 		padding: 0%;
 		margin-top: 8%;
@@ -1800,12 +1775,6 @@ a.gaurav{
 	
 
 
-.pics1{
-	
-	width: 100%;
-	position: relative;
-	top: 17%;
-	}
 	
 	.ieeelogo{
 	margin: -20px;
@@ -1924,7 +1893,6 @@ a.gaurav{
 }
 .upimg9:hover .hoverman{
 	z-index: 7;
-	color: orange;
 	position: relative;
 	font-size: 40px;
 }
@@ -2115,9 +2083,6 @@ button:hover {
 	font-weight: bold;
 }
 
-.top{
-	font-weight: bold;
-}
 
 .card {
     background-color: #3c3c3c;
