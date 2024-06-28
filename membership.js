@@ -319,7 +319,7 @@ function executeGoogleFormsSubmit() {
         var value = (fieldId.startsWith("dob_")) ? dob[fieldId.split("_")[1] === "year" ? 0 : fieldId.split("_")[1] === "month" ? 1 : 2] : document.getElementById(fieldId).value;
         formData.append(entryId, value);
     }
-    const chapters = ["CS", "SPS", "ITS", "CIS", "RAS", "PES", "COMSOC","AESSS"];
+    const chapters = ["CS", "SPS", "ITS", "CIS", "RAS", "PES", "COMSOC","AESS"];
     for (var i = 0; i < chapters.length; i++) {
         if (selectedImages["selectedImage" + (i+1)]) {
             formData.append("entry.1729285030", chapters[i]);
