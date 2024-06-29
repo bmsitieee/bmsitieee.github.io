@@ -1,0 +1,60 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f8f8f8;
+}
+
+h1 {
+    margin: 20px 0;
+    font-size: 2em;
+    color: #333;
+}
+
+.pdf-embed {
+    width: 80%;
+    height: 600px;
+    border: none;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .pdf-embed {
+        width: 95%;
+        height: 400px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+}
+
+/* Tablet View */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .pdf-embed {
+        width: 90%;
+        height: 500px;
+    }
+
+    h1 {
+        font-size: 1.75em;
+    }
+}
+
+/* Desktop View */
+@media (min-width: 1025px) {
+    .pdf-embed {
+        width: 80%;
+        height: 600px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+}
