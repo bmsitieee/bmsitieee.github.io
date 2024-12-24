@@ -103,7 +103,7 @@ button {
     margin-top: 10px; /* Adjust the margin as needed */
 }
 .selected {
-    filter: grayscale(100%);
+    filter: grayscale(100%) blur(2px);
 }
 .info-container {
     position: fixed;
