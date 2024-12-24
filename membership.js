@@ -10,7 +10,9 @@ var selectedImages = {
     "selectedImage4": false,
     "selectedImage5": false,
     "selectedImage6": false,
-    "selectedImage7": false
+    "selectedImage7": false,
+    "selectedImage8": false
+
 };
 function changeShade1() {
     var image = document.getElementById('selectedImage1');
@@ -173,6 +175,30 @@ function changeShade7() {
     }
     updatePriceBox(totalPrice1);
 }
+
+function changeShade8() {
+    var image = document.getElementById('selectedImage8');
+    var selectButton7 = document.getElementById('selectButton8');
+    image.classList.toggle('selected');
+    var productPrice = 240;
+    var productPrice1 = 240;
+    if (image.classList.contains('selected')) {
+        selectButton8.textContent = 'Select';
+        selectButton8.classList.remove('selectedButton8');
+        totalPrice1 -= productPrice;
+        chapters -= productPrice1;
+        count--;
+        selectedImages["selectedImage8"] = false;
+    } else {
+        selectButton8.classList.add('selectedButton8');
+        selectButton8.textContent = 'Selected';
+        count++;
+        chapters += productPrice1;
+        totalPrice1 += productPrice;
+        selectedImages["selectedImage8"] = true;
+    }
+    updatePriceBox(totalPrice1);
+}
 function toggleInfo1() {
     var infoBox = document.getElementById('infoBox1');
     infoBox.classList.toggle('show');
@@ -199,6 +225,10 @@ function toggleInfo6() {
 }
 function toggleInfo7() {
     var infoBox = document.getElementById('infoBox7');
+    infoBox.classList.toggle('show');
+}
+function toggleInfo8() {
+    var infoBox = document.getElementById('infoBox8');
     infoBox.classList.toggle('show');
 }
 // Close info box if clicked outside of it
@@ -244,6 +274,12 @@ document.addEventListener('click', function (event) {
         infoBox.classList.remove('show');
     }
 });
+document.addEventListener('click', function (event) {
+    var infoBox = document.getElementById('infoBox8');
+    if (!event.target.matches('img') && !event.target.closest('.info-container')) {
+        infoBox.classList.remove('show');
+    }
+});
 function calculateTotalPrice(totalPrice) {
     var discount = 0;
     if (count >= 2)
@@ -283,7 +319,7 @@ function executeGoogleFormsSubmit() {
         var value = (fieldId.startsWith("dob_")) ? dob[fieldId.split("_")[1] === "year" ? 0 : fieldId.split("_")[1] === "month" ? 1 : 2] : document.getElementById(fieldId).value;
         formData.append(entryId, value);
     }
-    const chapters = ["CS", "SPS", "ITS", "CIS", "RAS", "PES", "COMSOC"];
+    const chapters = ["CS", "SPS", "ITS", "CIS", "RAS", "PES", "COMSOC","AESS"];
     for (var i = 0; i < chapters.length; i++) {
         if (selectedImages["selectedImage" + (i+1)]) {
             formData.append("entry.1729285030", chapters[i]);

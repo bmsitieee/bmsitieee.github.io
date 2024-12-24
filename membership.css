@@ -95,7 +95,7 @@ a:hover {
     background-color: #fff;
     color: #6a1f9a;
 } 
-#selectedImage1,#selectedImage2,#selectedImage3,#selectedImage4,#selectedImage5,#selectedImage6, #selectedImage7 {
+#selectedImage1,#selectedImage2,#selectedImage3,#selectedImage4,#selectedImage5,#selectedImage6, #selectedImage7 ,#selectedImage8{
     margin-top: 10px; /* Adjust the margin as needed */
     transition: filter 0.3s ease-in-out;
 }
@@ -106,7 +106,8 @@ button {
     filter: grayscale(100%) blur(2px);
 }
 .info-container {
-    position: fixed;
+    z-index: 9999;
+    position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -116,7 +117,9 @@ button {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     display: none;
 }
-
+.makeCenter{
+    text-align: left;
+}
 .info-container.show {
     display: block;
 }
@@ -163,7 +166,7 @@ button {
     text-align: center;
     color: #333;
 }
-.selectedButton1, .selectedButton2,.selectedButton3,.selectedButton4,.selectedButton5, .selectedButton6, .selectedButton7{
+.selectedButton1, .selectedButton2,.selectedButton3,.selectedButton4,.selectedButton5, .selectedButton6, .selectedButton7 ,.selectedButton8{
     background-color: green;
     color: white;
 }
