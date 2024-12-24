@@ -98,12 +98,13 @@ a:hover {
 #selectedImage1,#selectedImage2,#selectedImage3,#selectedImage4,#selectedImage5,#selectedImage6, #selectedImage7 ,#selectedImage8{
     margin-top: 10px; /* Adjust the margin as needed */
     transition: filter 0.3s ease-in-out;
+    
 }
 button {
     margin-top: 10px; /* Adjust the margin as needed */
 }
 .selected {
-    filter: grayscale(100%);
+    filter: grayscale(100%) blur(2px);
 }
 .info-container {
     z-index: 9999;
